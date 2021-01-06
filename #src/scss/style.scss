@@ -1,0 +1,17 @@
+@import "mixin";
+@import "fonts";
+@import "vars";
+@import "nullstyle";
+
+body {
+  font-family: $fontFamily;
+}
+
+@import "header";
+
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

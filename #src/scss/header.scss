@@ -1,0 +1,265 @@
+.header {
+   background: url(../img/header/header_fon.jpg) top no-repeat;
+
+   // .header__top
+
+   &__top {
+   }
+
+   // .header__bottom
+
+   &__bottom {
+   }
+}
+.top-header {
+
+   // .top-header__content
+
+   &__content {
+      display: flex;
+      align-items: center;
+      height: 90px;
+   }
+
+   // .top-header__column
+
+   &__column {
+      flex: 0 1 50%;
+      &:nth-child(2) {
+         padding: 25px 0 0 0;
+         align-self: flex-start;
+         flex: 0 0 190px;
+         text-align: center;
+      }
+      p {
+         color: #fff;
+         font-size: 12px;
+         line-height: 14px;
+         letter-spacing: 0.6px;
+         text-align: center;
+         padding: 12px 0 0 0;
+      }
+   }
+
+   // .top-header__menu
+
+   &__menu {
+   }
+
+   // .top-header__logo
+
+   &__logo {
+   }
+
+   // .top-header__contacts
+
+   &__contacts {
+   }
+}
+.menu {
+
+   // .menu__icon
+
+   &__icon {
+   }
+
+   // .menu__body
+
+   &__body {
+   }
+
+   // .menu__list
+
+   &__list {
+      display: grid;
+      grid-template-columns: 130px 130px 130px;
+      white-space: nowrap;
+      li {
+         margin: 1px 0;
+      }
+   }
+
+   // .menu__link
+
+   &__link {
+      font-family: "Play";
+      color: #fff;
+      font-size: 14px;
+      text-decoration: underline;
+
+      padding: 0 22px;
+      height: 27px;
+      transition: all 0.2s ease 0s;
+
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;   
+      @media (min-width: 992px) {
+         &:hover {
+            border-radius: 20px;
+            background-color: #068292;
+         }
+      }
+   }
+}
+.icon-menu {
+}
+.contacts-header {
+   display: flex;
+   justify-content: center;
+
+   // .contacts-header__column
+
+   &__column {
+      padding: 0 30px;
+      border-right: 1px solid #fff;
+      &:last-child {
+         border: none;
+      }
+   }
+
+   // .contacts-header__item
+
+   &__item {
+   }
+
+   // .contacts-header__item-icon
+
+   &__item-icon {
+      background: url(../img/header/phone.png) left no-repeat;
+      padding: 0 0 0 37px;
+   }
+
+   // .contacts-header__label
+
+   &__label {
+      margin: 0 0 5px 0;
+      font-size: 12x;
+      font-weight: 300;
+      color: #fff;
+   }
+
+   // .contacts-header__phone
+
+   &__phone {
+      font-size: 18px;
+      font-weight: 900;
+      color: #fff;
+   }
+}
+.bottom-header {
+
+   // .bottom-header__content
+
+   &__content {
+      height: 63px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   // .bottom-header__column
+
+   &__column {
+      flex: 0 1 calc(50% - 95px);
+   }
+
+   // .bottom-header__actions
+
+   &__actions {
+   }
+
+   // .bottom-header__info
+
+   &__info {
+   }
+}
+.actions-header {
+   display: flex;
+   align-items: center;
+   li {
+      margin: 0 54px 0 0;
+      @media (max-width: 1440px) {
+         margin: 0 54 / 1440 * 100vh 0 0;
+      }
+   }
+   // .actions-header__login
+
+   &__login {
+      padding: 0 0 0 36px;
+      background: url(../img/header/login.png) left no-repeat;
+      display: inline-block;
+      line-height: 24px;
+      color: #999999;
+      span {
+         border-bottom: 1px dotted #999;
+      }
+   }
+
+   // .actions-header__reg
+
+   &__reg {
+      padding: 0 0 0 36px;
+      background: url(../img/header/register.png) left no-repeat;
+      display: inline-block;
+      line-height: 24px;
+      color: $basicColor;
+      span {
+         border-bottom: 1px dotted #999;
+      }
+   }
+
+   // .actions-header__email
+
+   &__email {
+      padding: 0 0 0 36px;
+      background: url(../img/header/mail.png) left no-repeat;
+      display: inline-block;
+      line-height: 24px;
+      color: #999999;
+      span {
+         border-bottom: 1px solid #999;
+      }
+   }
+}
+.info-header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   // .info-header__column
+
+   &__column {
+      padding: 0 54px 0 0;
+      @media (max-width: 1440px) {
+         padding: 0 54 / 1440 * 100vh 0 0;
+      }
+      &:last-child {
+         padding: 0;
+      }
+   }
+
+   // .info-header__callback
+
+   &__callback {
+      padding: 0 0 0 32px;
+      background: url(../img/header/callback.png) left no-repeat;
+      display: inline-block;
+      color: $basicColor;
+      line-height: 20px;
+      span {
+         border-bottom: 1px dotted #999;
+      }
+   }
+
+   // .info-header__schedule
+
+   &__schedule {
+   }
+
+   // .info-header__cart
+
+   &__cart {
+   }
+}
+
