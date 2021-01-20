@@ -116,6 +116,9 @@
       &:last-child {
          border: none;
       }
+      @media (max-width: 1150px) {
+         padding: 0 15px;
+      }
    }
 
    // .contacts-header__item
@@ -126,8 +129,12 @@
    // .contacts-header__item-icon
 
    &__item-icon {
-      background: url(../img/header/phone.png) left no-repeat;
+      background: url("../img/header/phone.png") left no-repeat;
       padding: 0 0 0 37px;
+      @media (max-width: 1150px) {
+         padding: 0 0 0 25px;
+         background-size: 15px;
+      }
    }
 
    // .contacts-header__label
@@ -145,6 +152,10 @@
       font-size: 18px;
       font-weight: 900;
       color: #fff;
+      white-space: nowrap;
+      @media (max-width: 1150px) {
+         font-size: 16px;
+      }
    }
 }
 .bottom-header {
@@ -178,7 +189,7 @@
    display: flex;
    align-items: center;
    li {
-      margin: 0 54px 0 0;
+      margin: 0 50px 0 0;
       @media (max-width: 1440px) {
          margin: 0 54 / 1440 * 100vh 0 0;
       }
@@ -187,7 +198,7 @@
 
    &__login {
       padding: 0 0 0 36px;
-      background: url(../img/header/login.png) left no-repeat;
+      background: url("../img/header/login.png") left no-repeat;
       display: inline-block;
       line-height: 24px;
       color: #999999;
@@ -200,7 +211,7 @@
 
    &__reg {
       padding: 0 0 0 36px;
-      background: url(../img/header/register.png) left no-repeat;
+      background: url("../img/header/register.png") left no-repeat;
       display: inline-block;
       line-height: 24px;
       color: $basicColor;
@@ -213,7 +224,7 @@
 
    &__email {
       padding: 0 0 0 36px;
-      background: url(../img/header/mail.png) left no-repeat;
+      background: url("../img/header/mail.png") left no-repeat;
       display: inline-block;
       line-height: 24px;
       color: #999999;
@@ -230,9 +241,9 @@
    // .info-header__column
 
    &__column {
-      padding: 0 54px 0 0;
+      padding: 0 50px 0 0;
       @media (max-width: 1440px) {
-         padding: 0 54 / 1440 * 100vh 0 0;
+         padding: 0 50 / 1440 * 100vh 0 0;
       }
       &:last-child {
          padding: 0;
@@ -243,7 +254,7 @@
 
    &__callback {
       padding: 0 0 0 32px;
-      background: url(../img/header/callback.png) left no-repeat;
+      background: url("../img/header/callback.png") left no-repeat;
       display: inline-block;
       color: $basicColor;
       line-height: 20px;
@@ -255,11 +266,38 @@
    // .info-header__schedule
 
    &__schedule {
+      padding: 0 0 0 37px;
+      background: url("../img/header/schedule.png") left no-repeat;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 18px;
+      color: #999;
+      span {
+         font-weight: 900;
+      }
    }
 
    // .info-header__cart
 
    &__cart {
+      width: 43px;
+      height: 43px;
+      display: inline-block;
+      background: url("../img/header/header_cart.png") 0 0 no-repeat;
+      position: relative;
+      span {
+         padding: 0 11px;
+         line-height: 25px;
+         border-radius: 20px;
+         background-color: $orangeColor;
+         position: absolute;
+         right: 0;
+         top: -4px;
+         transform: translate(40%,0);
+         font-size: 18px;
+         font-weight: bold;
+         color: #fff;
+      }
    }
 }
 

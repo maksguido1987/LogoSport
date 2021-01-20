@@ -205,7 +205,7 @@ body {
 }
 
 .contacts-header__item-icon {
-  background: url(../img/header/phone.png) left no-repeat;
+  background: url("../img/header/phone.png") left no-repeat;
   padding: 0 0 0 37px;
 }
 
@@ -220,6 +220,7 @@ body {
   font-size: 18px;
   font-weight: 900;
   color: #fff;
+  white-space: nowrap;
 }
 
 .bottom-header__content {
@@ -251,12 +252,12 @@ body {
 }
 
 .actions-header li {
-  margin: 0 54px 0 0;
+  margin: 0 50px 0 0;
 }
 
 .actions-header__login {
   padding: 0 0 0 36px;
-  background: url(../img/header/login.png) left no-repeat;
+  background: url("../img/header/login.png") left no-repeat;
   display: inline-block;
   line-height: 24px;
   color: #999999;
@@ -268,7 +269,7 @@ body {
 
 .actions-header__reg {
   padding: 0 0 0 36px;
-  background: url(../img/header/register.png) left no-repeat;
+  background: url("../img/header/register.png") left no-repeat;
   display: inline-block;
   line-height: 24px;
   color: #4396a9;
@@ -280,7 +281,7 @@ body {
 
 .actions-header__email {
   padding: 0 0 0 36px;
-  background: url(../img/header/mail.png) left no-repeat;
+  background: url("../img/header/mail.png") left no-repeat;
   display: inline-block;
   line-height: 24px;
   color: #999999;
@@ -303,7 +304,7 @@ body {
 }
 
 .info-header__column {
-  padding: 0 54px 0 0;
+  padding: 0 50px 0 0;
 }
 
 .info-header__column:last-child {
@@ -312,7 +313,7 @@ body {
 
 .info-header__callback {
   padding: 0 0 0 32px;
-  background: url(../img/header/callback.png) left no-repeat;
+  background: url("../img/header/callback.png") left no-repeat;
   display: inline-block;
   color: #4396a9;
   line-height: 20px;
@@ -322,8 +323,45 @@ body {
   border-bottom: 1px dotted #999;
 }
 
+.info-header__schedule {
+  padding: 0 0 0 37px;
+  background: url("../img/header/schedule.png") left no-repeat;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #999;
+}
+
+.info-header__schedule span {
+  font-weight: 900;
+}
+
+.info-header__cart {
+  width: 43px;
+  height: 43px;
+  display: inline-block;
+  background: url("../img/header/header_cart.png") 0 0 no-repeat;
+  position: relative;
+}
+
+.info-header__cart span {
+  padding: 0 11px;
+  line-height: 25px;
+  border-radius: 20px;
+  background-color: #f68038;
+  position: absolute;
+  right: 0;
+  top: -4px;
+  -webkit-transform: translate(40%, 0);
+      -ms-transform: translate(40%, 0);
+          transform: translate(40%, 0);
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
 .container {
-  max-width: 1440px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -341,7 +379,22 @@ body {
   }
 
   .info-header__column {
-    padding: 0 3.75vh 0 0;
+    padding: 0 3.47222vh 0 0;
+  }
+}
+
+@media (max-width: 1150px) {
+  .contacts-header__column {
+    padding: 0 15px;
+  }
+
+  .contacts-header__item-icon {
+    padding: 0 0 0 25px;
+    background-size: 15px;
+  }
+
+  .contacts-header__phone {
+    font-size: 16px;
   }
 }
 
@@ -356,3 +409,7 @@ body {
 .webp .actions-header__email{ background: url(../img/header/mail.webp) left no-repeat; }
 
 .webp .info-header__callback{ background: url(../img/header/callback.webp) left no-repeat; }
+
+.webp .info-header__schedule{ background: url(../img/header/schedule.webp) left no-repeat; }
+
+.webp .info-header__cart{ background: url(../img/header/header_cart.webp) 0 0 no-repeat; }
