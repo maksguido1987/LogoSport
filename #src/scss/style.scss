@@ -5,6 +5,11 @@
 
 body {
   font-family: $fontFamily;
+  @media (max-width: 992px) {
+    &.lock {
+      overflow: hidden;
+    }
+  }
 }
 
 @import "header";

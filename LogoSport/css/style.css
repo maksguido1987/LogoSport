@@ -115,7 +115,7 @@ body {
 }
 
 .header {
-  background: url(../img/header/header_fon.jpg) top no-repeat;
+  background: url("../img/header/header_fon.jpg") top no-repeat;
 }
 
 .top-header__content {
@@ -186,6 +186,10 @@ body {
           align-items: center;
 }
 
+.icon-menu {
+  display: none;
+}
+
 .contacts-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -197,15 +201,17 @@ body {
 
 .contacts-header__column {
   padding: 0 30px;
-  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
 }
 
-.contacts-header__column:last-child {
+.contacts-header__column:first-child {
   border: none;
 }
 
 .contacts-header__item-icon {
-  background: url("../img/header/phone.png") left no-repeat;
+  background-image: url("../img/header/phone.png");
+  background-repeat: no-repeat;
+  background-position: left;
   padding: 0 0 0 37px;
 }
 
@@ -255,40 +261,38 @@ body {
   margin: 0 50px 0 0;
 }
 
-.actions-header__login {
+.actions-header__item {
   padding: 0 0 0 36px;
-  background: url("../img/header/login.png") left no-repeat;
   display: inline-block;
   line-height: 24px;
   color: #999999;
 }
 
-.actions-header__login span {
-  border-bottom: 1px dotted #999;
-}
-
-.actions-header__reg {
-  padding: 0 0 0 36px;
-  background: url("../img/header/register.png") left no-repeat;
-  display: inline-block;
-  line-height: 24px;
-  color: #4396a9;
-}
-
-.actions-header__reg span {
-  border-bottom: 1px dotted #999;
-}
-
-.actions-header__email {
-  padding: 0 0 0 36px;
-  background: url("../img/header/mail.png") left no-repeat;
-  display: inline-block;
-  line-height: 24px;
+.actions-header__item span {
+  border-bottom: 1px dotted #999999;
   color: #999999;
 }
 
-.actions-header__email span {
-  border-bottom: 1px solid #999;
+.actions-header__item-login {
+  background-image: url("../img/header/login.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.actions-header__item-reg {
+  background-image: url("../img/header/register.png");
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.actions-header__item-email {
+  background-image: url("../img/header/mail.png");
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.actions-header__item-email span {
+  border-bottom: 1px solid;
 }
 
 .info-header {
@@ -311,19 +315,19 @@ body {
   padding: 0;
 }
 
-.info-header__callback {
+.info-header__item-callback {
   padding: 0 0 0 32px;
-  background: url("../img/header/callback.png") left no-repeat;
   display: inline-block;
+  background: url("../img/header/callback.png") left no-repeat;
   color: #4396a9;
   line-height: 20px;
 }
 
-.info-header__callback span {
+.info-header__item-callback span {
   border-bottom: 1px dotted #999;
 }
 
-.info-header__schedule {
+.info-header__item-schedule {
   padding: 0 0 0 37px;
   background: url("../img/header/schedule.png") left no-repeat;
   font-size: 12px;
@@ -332,19 +336,19 @@ body {
   color: #999;
 }
 
-.info-header__schedule span {
+.info-header__item-schedule span {
   font-weight: 900;
 }
 
-.info-header__cart {
+.info-header__item-cart {
   width: 43px;
   height: 43px;
   display: inline-block;
-  background: url("../img/header/header_cart.png") 0 0 no-repeat;
+  background: url("../img/header/header_cart.png") left no-repeat;
   position: relative;
 }
 
-.info-header__cart span {
+.info-header__item-cart span {
   padding: 0 11px;
   line-height: 25px;
   border-radius: 20px;
@@ -371,13 +375,13 @@ body {
     border-radius: 20px;
     background-color: #068292;
   }
+
+  .actions-header__item :hover {
+    color: #4396a9;
+  }
 }
 
 @media (max-width: 1440px) {
-  .actions-header li {
-    margin: 0 3.75vh 0 0;
-  }
-
   .info-header__column {
     padding: 0 3.47222vh 0 0;
   }
@@ -396,20 +400,98 @@ body {
   .contacts-header__phone {
     font-size: 16px;
   }
+
+  .actions-header li {
+    margin: 0 23px 0 0;
+  }
+
+  .actions-header__item {
+    padding: 0 0 0 28px;
+  }
 }
 
-.webp .header{ background: url(../img/header/header_fon.webp) top no-repeat; }
+@media (max-width: 1100px) {
+  .menu__list {
+    -ms-grid-columns: 100px 130px 130px;
+    grid-template-columns: 100px 130px 130px;
+  }
 
-.webp .contacts-header__item-icon{ background: url(../img/header/phone.webp) left no-repeat; }
+  .menu__link {
+    padding: 0 5px;
+  }
+}
 
-.webp .actions-header__login{ background: url(../img/header/login.webp) left no-repeat; }
+@media (max-width: 992px) {
+  body.lock {
+    overflow: hidden;
+  }
 
-.webp .actions-header__reg{ background: url(../img/header/register.webp) left no-repeat; }
+  .menu__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    display: none;
+  }
 
-.webp .actions-header__email{ background: url(../img/header/mail.webp) left no-repeat; }
+  .icon-menu {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+  }
 
-.webp .info-header__callback{ background: url(../img/header/callback.webp) left no-repeat; }
+  .icon-menu span {
+    -webkit-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    transition: all ease .3s;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    top: calc(50% - 1px);
+    left: 0;
+  }
 
-.webp .info-header__schedule{ background: url(../img/header/schedule.webp) left no-repeat; }
+  .icon-menu span:first-child {
+    top: 0;
+  }
 
-.webp .info-header__cart{ background: url(../img/header/header_cart.webp) 0 0 no-repeat; }
+  .icon-menu span:last-child {
+    top: auto;
+    bottom: 0px;
+  }
+
+  .icon-menu.active span {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+
+  .icon-menu.active span:last-child {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: calc(50% - 1px);
+  }
+
+  .icon-menu.active span:first-child {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: calc(50% - 1px);
+  }
+
+  .contacts-header__column:last-child {
+    display: none;
+  }
+
+  .actions-header__item {
+    padding: 0;
+    background: none;
+  }
+}
