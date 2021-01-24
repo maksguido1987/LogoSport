@@ -1,19 +1,11 @@
-function testWebP(callback) {
-  var webP = new Image();
-  webP.onload = webP.onerror = function () {
-    callback(webP.height == 2);
-  };
-  webP.src =
-    "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
 
-testWebP(function (support) {
-  if (support == true) {
-    document.querySelector("body").classList.add("webp");
-  } else {
-    document.querySelector("body").classList.add("no-webp");
-  }
-});
+// Dynamic Adapt v.1
+// HTML data-da="where(uniq class name),when(breakpoint),position(digi)"
+// e.x. data-da=".item,992,2"
+// Andrikanych Yevhen 2020
+// https://www.youtube.com/c/freelancerlifestyle
+
+"use strict";
 
 function DynamicAdapt(type) {
 	this.type = type;
@@ -168,11 +160,92 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 
 const da = new DynamicAdapt("max");
 da.init();
+
+// (function () {
+// 	let original_position = [];
+// 	let da_elements = document.querySelectorAll('[data-da]');
+// 	let da_elements_array = [];
+// 	let da_match_media = [];
+// 	// Заполняем массивы
+// 	if (da_elements.length > 0) {
+// 		let number = 0;
+// 		for (let index = 0; index < da_elements.length; index++) {
+// 			const da_element = da_elements[index];
+// 			const da_move = da_element.getAttribute('data-da');
+// 			const da_array = da_move.split(',');
+// 			if (da_array.length == 3) {
+// 				da_element.setAttribute('data-da-index', number);
+// 				// Заполняем массив первоначальных значений
+// 				original_positions[number] = {
+// 					"parent": da_element.parentNode,
+// 					"index": index_in_arent(da_element)
+// 				};
+// 				// Заполняем массив элементов
+// 				da_elements_array[number] = {
+// 					"element": da_element,
+// 					"destination": document.querySelector('.' + da_array[0].trim()),
+// 					"place": da_array[1].trim(),
+// 					"breakpoint": da_array[2].trim()
+// 				};
+// 				number++;
+// 			}
+// 		}
+// 		dynamic_adapt_sort(da_elements_array);
+
+// 		// Создаём события в точке брекпоинта
+// 		for (let index = 0; index < da_elements_array.length; index++) {
+// 			const el = da_elements_array[index];
+// 			const da_breakpoint = el.breakpoint;
+// 			const da_type = "max" // Для mobilegitst поменять на min
+
+// 			da_match_media.push(window.matchMedia("(" + da_type + "-width: " + da_breakpoint + "px)"));
+// 			da_match_media[index].addListener(dynamic_adapt);
+// 		}
+// 	}
+
+// 	// Основная функция
+// 	function dynamic_adapt(e) {
+// 		for (let index = 0; index < da_elements_array.length; index++) {
+// 			const el = da_elements_array[index];
+// 			const da_elements = el.element;
+// 			const da_destination = el.destination;
+// 			const da_place = el.place;
+// 			const da_breakpoint = el.breakpoint;
+// 			const da_classname = "_dynamic_adapt_" + da_breakpoint;
+
+// 			if (da_match_media[index].matches) {
+// 				// Перебрасываем элемент
+// 				if (!da_element.classList.contains(da_classname)) {
+// 					let actual_index;
+// 					if (da_place == 'first') {
+// 						actual_index = index_of_elements(da_destination)[0];
+// 					} else if (da_place == 'last') {
+// 						actual_index = index_of_elements(da_destination)[index_of_elements(da_destination).length];
+// 					} else {
+// 						actual_index = index_of_elements(da_destination)[da_place];
+// 					}
+// 					da_destination.insertBefore(da_element, da_destination.children[actual_index]);
+// 					da_element.classList.add(da_classname);
+// 				}
+// 			} else {
+// 				// Возврат на место
+// 				if (da_element.classList.contains(da_classname)) {
+// 					dynamic_adapt_back(da_element);
+// 					da_element.classList.remove(da_classname);
+// 				}
+// 			}
+// 		}
+// 		custom_adapt();
+// 	}
+
+// })
 function burgerMenu() {
    let iconMenu = document.querySelector('.icon-menu');
+   let menuIconBody = document.querySelector('.menu__body');
    let body = document.querySelector('body');
    
    iconMenu.classList.toggle('active');
+   menuIconBody.classList.toggle('active');
    body.classList.toggle('lock');
 }
 
