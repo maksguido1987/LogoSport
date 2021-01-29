@@ -1,12 +1,13 @@
 .header {
-  background: url("../img/header/header_fon.jpg") top no-repeat;
+  background: #fff url("../img/header/header_fon.jpg") top no-repeat;
   @media (max-width: 767px) {
-    background: url("../img/header/header_fon.jpg") 0 -20px no-repeat;
+    background: #fff url("../img/header/header_fon.jpg") 0 -20px no-repeat;
   }
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 50;
 
   // .header__top
 
