@@ -249,3 +249,20 @@ function burgerMenu() {
 }
 
 document.querySelector('.icon-menu').onclick = burgerMenu;
+
+
+function asideMenu() {
+   let menuParents = document.querySelectorAll('.menu-page__parent');
+
+   for (let i = 0; i < menuParents.length; i++) {
+      menuParents[i].addEventListener('mouseenter', () => {
+         menuParents[i].classList.add('active');
+      })
+      menuParents[i].addEventListener('mouseleave', () => {
+         menuParents[i].classList.remove('active');
+      })
+   }
+   
+}
+
+asideMenu();
