@@ -141,6 +141,10 @@ body {
   // .menu-page__body
 
   &__body {
+    display: none;
+    &.active {
+      display: block;
+    }
   }
 
   // .menu-page__list

@@ -507,6 +507,14 @@ body {
   height: 15px;
 }
 
+.menu-page__body {
+  display: none;
+}
+
+.menu-page__body.active {
+  display: block;
+}
+
 .menu-page__list > li {
   border-bottom: 1px solid #1aa7b9;
 }
