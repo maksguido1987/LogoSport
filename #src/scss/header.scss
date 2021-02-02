@@ -452,11 +452,14 @@
     padding: 0 0 0 32px;
     display: inline-block;
     background: url("../img/header/callback.png") left no-repeat;
-    color: $basicColor;
+    color: #999999;
     white-space: nowrap;
     line-height: 20px;
     span {
       border-bottom: 1px dotted #999;
+    }
+    &:hover {
+      color: $basicColor;
     }
   }
 
