@@ -429,6 +429,17 @@ body {
     font-weight: 300;
     > span {
       border-bottom: 1px dashed #858585;
+      &:last-child {
+        display: none;
+      }
+    }
+    &.categories {
+      > span {
+        display: none;
+        &:last-child {
+          display: block;
+        }
+      }
     }
   }
 

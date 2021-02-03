@@ -45,3 +45,28 @@ function pageSearch() {
 }
 document.querySelector('.search-page__select').onclick = pageSearch;
 
+
+function checkboxes() {
+   let pageSearchCheckboxes = document.querySelectorAll('.checkbox');
+   
+   for (let i = 0; i < pageSearchCheckboxes.length; i++) {
+   let checkboxCategory = pageSearchCheckboxes[i];
+      checkboxCategory.addEventListener('change', () => {
+         checkboxCategory.classList.toggle('collect');
+
+         let collectActiveCheckboxes = document.querySelectorAll('.checkbox.collect');
+         console.log(collectActiveCheckboxes);
+         if (collectActiveCheckboxes.length > 0) {
+            document.querySelector('.search-page__title').classList.add('categories');
+            let searchQuantity = document.querySelector('.search-page__quantity');
+            searchQuantity.innerHTML = searchQuantity.getAttribute('data-title') + collectActiveCheckboxes.length;
+         } else {
+            document.querySelector('.search-page__title').classList.remove('categories');
+         }
+      })
+      
+   }
+}
+checkboxes();
+
+

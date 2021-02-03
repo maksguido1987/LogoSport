@@ -786,6 +786,18 @@ body {
   border-bottom: 1px dashed #858585;
 }
 
+.search-page__title > span:last-child {
+  display: none;
+}
+
+.search-page__title.categories > span {
+  display: none;
+}
+
+.search-page__title.categories > span:last-child {
+  display: block;
+}
+
 .search-page__categories {
   position: absolute;
   top: 100%;
